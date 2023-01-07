@@ -6,6 +6,14 @@
   <router-view />
 </template>
 
+<script>
+  import 'bootstrap' //default dist/js/bootstrap
+  import 'bootstrap/dist/css/bootstrap.min.css'
+  export default {
+    name: 'App'
+  }
+</script>
+
 <style>
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
