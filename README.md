@@ -53,7 +53,7 @@
 # 專案安裝
 1. 下載專案
 ```
-$ git clone https://github.com/AllenliIE/attendance-management-system.git
+$ git clone https://github.com/AllenliIE/attendance-management-platform.git
 ```
 
 2. MySQL Workbench
