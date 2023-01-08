@@ -9,6 +9,11 @@ const routes = [
     component: SignIn
   },
   {
+    path: '/signup',
+    name: 'sign-up',
+    component: () => import('../views/SignUp.vue') //動態載入頁面
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: NotFound
