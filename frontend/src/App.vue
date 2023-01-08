@@ -1,6 +1,6 @@
 <template>
   <div id="attendance-management-platform">
-    <Navbar />
+    <NavBar />
     <main
       role="main"
       class="mt-5 bg-white"
@@ -13,12 +13,12 @@
 <script>
   import 'bootstrap' //default dist/js/bootstrap
   import 'bootstrap/dist/css/bootstrap.min.css'
-  import Navbar from './components/Navbar'
+  import NavBar from './components/NavBar'
 
   export default {
     name: 'App',
     components: {
-     Navbar
+     NavBar
    }
   }
 </script>
