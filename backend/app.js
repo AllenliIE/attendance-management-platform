@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 const SESSION_SECRET = "secret";
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(
   session({ secret: SESSION_SECRET, resave: false, saveUninitialized: false })
 );
