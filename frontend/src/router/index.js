@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'root',
-    redirect: '/attendance'
+    redirect: '/signin'
   },
   {
     path: '/signin',

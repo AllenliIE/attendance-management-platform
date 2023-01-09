@@ -6,14 +6,14 @@
       </div>
 
       <div class="form-label-group mb-2">
-        <label for="email">email</label>
+        <label for="account">Account</label>
         <input
-          id="email"
-          v-model="email"
-          name="email"
-          type="email"
+          id="account"
+          v-model="account"
+          name="account"
+          type="text"
           class="form-control"
-          placeholder="email"
+          placeholder="account"
           autocomplete="username"
           required
           autofocus
@@ -28,7 +28,7 @@
           name="password"
           type="password"
           class="form-control"
-          placeholder="Password"
+          placeholder="password"
           autocomplete="current-password"
           required
         />
@@ -39,9 +39,7 @@
       </button>
 
       <div class="text-center mb-3">
-        <router-link to="/signup">
-          Sign Up
-        </router-link>
+        <router-link to="/signup"> Sign Up </router-link>
       </div>
 
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2023-2024</p>
@@ -50,21 +48,28 @@
 </template>
 
 <script>
+import authorizationAPI from "./../apis/authorization";
+
 export default {
-  data () {
+  data() {
     return {
-       email: '',
-      password: ''
-    }
+      account: "",
+      password: "",
+    };
   },
   methods: {
-    handleSubmit () {
-      const data = JSON.stringify({
-      email: this.email,
-      password: this.password
-    })
-    console.log('data', data)
-    }
-  }
-}
+    handleSubmit() {
+      authorizationAPI
+        .signIn({
+          account: this.account,
+          password: this.password,
+        })
+        .then((response) => {
+          const { data } = response;
+          localStorage.setItem("token", data.token);
+          this.$router.push("/attendance");
+        });
+    },
+  },
+};
 </script>

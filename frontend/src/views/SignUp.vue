@@ -39,6 +39,21 @@
         >
       </div>
 
+      <div class="form-label-group mb-2">
+        <label for="account">Account</label>
+        <input
+          id="account"
+          v-model="account"
+          name="account"
+          type="text"
+          class="form-control"
+          placeholder="account"
+          autocomplete="username"
+          required
+          autofocus
+        />
+      </div>
+
       <div class="form-label-group mb-3">
         <label for="password">Password</label>
         <input
@@ -47,7 +62,7 @@
           name="password"
           type="password"
           class="form-control"
-          placeholder="Password"
+          placeholder="password"
           autocomplete="new-password"
           required
         >
@@ -61,7 +76,7 @@
           name="passwordCheck"
           type="password"
           class="form-control"
-          placeholder="Password"
+          placeholder="password check"
           autocomplete="new-password"
           required
         >
